@@ -1,0 +1,106 @@
+Note:https://aws.amazon.com/premiumsupport/knowledge-center/s3-folder-user-access/
+
+1.Create Iam User.
+2.Create Custom Policy and Assign /attach to Iam user.
+3.In this policy.
+  a. User can List all Buckets in S3.
+  b.Next User Can list Particular Buckets in s3.Like tuldl-prod
+  c.Inside Tuldl-prod bucket,user have only permission on pinecode data.
+  
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowUserListAllBucketInS3",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:GetBucketLocation"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::*"
+            ]
+        },
+        {
+            "Sid": "AllowUserlistBuckert",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::tuldl-prod"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "s3:prefix": [
+                        "",
+                        "pincode data"
+                    ],
+                    "s3:delimiter": [
+                        "/"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowUserListParticularBucket",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::tuldl-prod"
+            ],
+            "Condition": {
+                "StringLike": {
+                    "s3:prefix": [
+                        "pincode data/*"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "AllowUserDoReadWrite",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::tuldl-prod/pincode data/*"
+            ]
+        }
+    ]
+}
+==================================================================================================
+{
+ "Version":"2012-10-17",
+ "Statement": [
+   {
+     "Sid": "AllowStatement1",
+     "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::*"]
+   },
+  {
+     "Sid": "AllowStatement2B",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::mycompanytest"],
+     "Condition":{"StringEquals":{"s3:prefix":["","newtest"],"s3:delimiter":["/"]}}
+    },
+  {
+     "Sid": "AllowStatement3",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::mycompanytest"],
+     "Condition":{"StringLike":{"s3:prefix":["newtest/*"]}}
+    },
+   {
+     "Sid": "AllowStatement4B",
+     "Effect": "Allow",
+     "Action": [s3:PutObject","s3:GetObject"],
+     "Resource": ["arn:aws:s3:::mycompanytest/newtest/*"]
+   }
+ ]
+}
