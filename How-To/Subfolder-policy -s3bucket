@@ -1,0 +1,33 @@
+## Grant Access to User-Specific Folders in an Amazon S3 Bucket
+--------------------------------------------------------------------
+{
+ "Version":"2012-10-17",
+ "Statement": [
+   {
+     "Sid": "AllowUserToSeeBucketListInTheConsole",
+     "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::*"]
+   },
+  {
+     "Sid": "AllowRootPincodeServiceabilityMatrixListingOftuldlprod",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::tuldl-prod"],
+     "Condition":{"StringEquals":{"s3:prefix":["","Pincode_Serviceability_Matrix/", "Pincode_Serviceability_Matrix/Logistics Serviceability Data/"],"s3:delimiter":["/"]}}
+    },
+   {
+     "Sid": "AllowListingOfPincode_Serviceability_Matrix",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::tuldl-prod"],
+     "Condition":{"StringLike":{"s3:prefix":["Pincode_Serviceability_Matrix/Logistics Serviceability Data/*"]}}
+   },
+   {
+     "Sid": "AllowAllS3ActionsInLogistics Serviceability Data",
+     "Effect": "Allow",
+     "Action": ["s3:PutObject","s3:GetObject"],
+     "Resource": ["arn:aws:s3:::tuldl-prod/Pincode_Serviceability_Matrix/Logistics Serviceability Data/*"]
+   }
+ ]
+}
