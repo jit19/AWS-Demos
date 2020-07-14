@@ -1,0 +1,88 @@
+Follow the link:
+https://www.javahelps.com/2017/09/install-oracle-jdk-9-on-linux.html
+-----------------------------------------------------------------------------
+sudo yum search openjdk
+ 1001  java -version
+ 1002  javc -version
+ 1003  javac -version
+ 1004  sudo yum search java*
+ 1005  sudo yum search jdk*
+ 1006  sudo yum search openjdk*
+ 1007  ls
+ 1008  sudo yum search openjdk*
+ 1009  sudo update alternative java
+ 1010  sudo alternatives update java
+ 1011  sudo alternatives --config java
+ 1012  sudo alternatives --config javac
+ 1013  ls /usr/lib/jvm
+ 1014  ls /usr/lib/jvm/java-11
+ 1015  ls /usr/lib/jvm/java-11-openjdk
+ 1016  ls /usr/lib/jvm/java-11-openjdk/bin/
+ 1017  ls /usr/lib/jvm/java-11/bin/
+ 1018  sudo alternatives --config javac
+ 1019  sudo yum search openjdk
+ 1020  yummmmmm install java-11-openjdk.x86_64 -y
+ 1021  sudo yum install java-11-openjdk.x86_64 -y
+ 1022  sudo yum update java-11-openjdk.x86_64 -y
+ 1023  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1024  sudo alternatives --config java
+ 1025  sudo alternatives --config javac
+ 1026  java -version
+ 1027  javac -version
+ 1028  sudo yum remove java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64
+ 1029  sudo yum install java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64
+ 1030  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1031  sudo rpm -ql java-11-openjdk
+ 1032  sudo rpm -ql java
+ 1033  java
+ 1034  which java
+ 1035  ls /usr/lib/jvm/java-openjdk/bin/
+ 1036  /usr/lib/jvm/java-openjdk/bin/java -version
+ 1037  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1038  ls /usr/lib/jvm/java////////
+ 1039  ls /usr/lib/jvm/java/bin/
+ 1040  /usr/lib/jvm/java/bin/java -version
+ 1041  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1042  sudo yum remove open-jdk
+ 1043  sudo yum remove openjdk
+ 1044  yum search openjdk
+ 1045  ssssudo yum install java-11-openjdk-devel.x86_64
+ 1046  sudo yum install java-11-openjdk-devel.x86_64
+ 1047  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1048  sudo yum install java-11-openjdk*
+ 1049  ls /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/
+ 1050  /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/java -version
+ 1051  /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64/bin/javac -version
+ 1052  sudo yum remove java*
+ 1053  sudo alternatives --config javac
+ 1054* sudo alternatives --remove java
+ 1055  sudo alternatives --remove javac /usr/lib/jvm/jdk-11.0.7/bin/javac
+ 1056  sudo alternatives --remove javac /usr/lib/jvm/java-11-openjdk-11.0.7.10-4.amzn2.0.1.x86_64
+ 1057  sudo alternatives --config java
+ 1058  java -version
+ 1059  sudo alternatives --remove java /usr/lib/jvm/jdk-11.0.7/bin/java
+ 1060  sudo alternatives --config java
+ 1061  ls /usr/lib/jvm
+ 1062  sudo yum install java
+ 1063  ls /usr/lib/jvm
+ 1064  sudo alternatives --config java
+ 1065  ls /usr/lib/jvm/java-11-amazon-corretto.x86_64/
+ 1066  java -version
+ 1067  javacccccc -version
+ 1068  javac -version
+ 1069  echo $JAVA_HOME
+ 1070  sudo vi /etc/environment 
+ 1071  echo $JAVA_HOME
+ 1072  source /etc/environment 
+ 1073  echo $JAVA_HOME
+ 1074  history
+ 1075  docker ps
+ 1076  java -version
+ 1077  javac -version
+ 1078  history
+ 1079  echo $PATH
+ 1080  sudo vi /etc/environment 
+ 1081  source /etc/environment 
+ 1082  echo $PATH
+ 1083   sudo alternatives --config java
+ 1084  history
