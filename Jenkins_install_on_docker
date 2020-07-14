@@ -1,0 +1,7 @@
+links:
+https://linuxhint.com/install_jenkins_docker_ubuntu/
+image used for jenkins for java 11:
+jenkins/jenkins:jdk11
+-------------------------------------------------
+https://hostadvice.com/how-to/how-to-run-a-jenkins-container-on-ubuntu-18-04/
+--------------------------------------------------------
