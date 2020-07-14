@@ -5,3 +5,6 @@ jenkins/jenkins:jdk11
 -------------------------------------------------
 https://hostadvice.com/how-to/how-to-run-a-jenkins-container-on-ubuntu-18-04/
 --------------------------------------------------------
+to run docker container:
+docker conatiner run --name jenkins-docker --rm -d --privileged --network=jenkins -v jenkins_data:/var/jenkins_home -p 8080:8080 jenkins/jenkins:jdk11
+----------------------------------------------
